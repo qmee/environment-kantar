@@ -69,6 +69,7 @@ brew 'awscli'
 brew 'terminal-notifier'
 brew 'forego'
 brew 'jq'
+brew 'svn'
 
 # heroku
 tap 'heroku/brew'
