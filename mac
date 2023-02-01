@@ -106,12 +106,12 @@ if [[ -z $(brew cask list | grep 'visual-studio-code') ]]; then
   code --install-extension mjmcloug.vscode-elixir
 fi
 
-if [[ ! -f $HOME/.dotfiles/zshrc ]]; then
-  echo "install dotfiles"
-  git clone git@github.com:qmee/dotfiles.git $HOME/.dotfiles
-  cd $HOME/.dotfiles
-  rake install
-fi
+# if [[ ! -f $HOME/.dotfiles/zshrc ]]; then
+#   echo "install dotfiles"
+#   git clone git@github.com:qmee/dotfiles.git $HOME/.dotfiles
+#   cd $HOME/.dotfiles
+#   rake install
+# fi
 
 echo "docker zsh completions"
   if [[ ! -d $HOME/.zsh/completions ]]; then
@@ -211,11 +211,11 @@ if [[ -z $(pgrep -x Flux) ]]; then
   read -p "Press any key to continue... " -n1 -s
 fi
 
-if [[ -z $(pgrep -x Vanilla) ]]; then
-  echo "opening apps for configuration"
-  open -a Vanilla
-  read -p "Press any key to continue... " -n1 -s
-fi
+# if [[ -z $(pgrep -x Vanilla) ]]; then
+#   echo "opening apps for configuration"
+#   open -a Vanilla
+#   read -p "Press any key to continue... " -n1 -s
+# fi
 
 
 read -p "Do you want to configure QM now? [y,n]" -n1 -s CFG_QM
@@ -271,11 +271,11 @@ defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreS
 # Mouse and trackpad                                                          #
 ###############################################################################
 
-echo "Turn on bluetooth mouse secondary click"
-defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode TwoButton
+# echo "Turn on bluetooth mouse secondary click"
+# defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode TwoButton
 
-echo "Turn on trackpad App Expose"
-defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+# echo "Turn on trackpad App Expose"
+# defaults write com.apple.dock showAppExposeGestureEnabled -bool true
 
 ###############################################################################
 # Mac App Store                                                               #
@@ -353,7 +353,7 @@ defaults write com.apple.TextEdit RichText -int 0
 ###############################################################################
 
 echo "Set the icon size of Dock items to 46 pixels"
-defaults write com.apple.dock tilesize -int 46
+# defaults write com.apple.dock tilesize -int 46
 
 ###############################################################################
 # Time Machine                                                                #
